@@ -1,0 +1,50 @@
+<?php
+include_once ' ../Config/db_conn.php'
+?>
+
+<?php
+if(isset ($_POST['login'])){
+
+    $username =$_POST['username'];
+    $password =$_POST['password'];
+
+  if(empty($username) || empty($password)) {
+  	header("Location:../loginpage.php?error=Fields_are_empty");
+  	exit();
+  }
+  else{
+  	$query = "SELECT * FROM students WHERE username = ?";
+  	$stmt = mysqli_stmt_init($conn);
+
+  	if (!mysqli_stmt_prepare($stmt, $query)) {
+  		header("Location:../loginpage.php?error=prepared_statement");
+  		exit();
+  	}
+  	else
+  	{
+  		mysqli_stmt_bind_param($stmt,"s",$username);
+  		mysqli_stmt_execute($stmt);
+  		$result = mysqli_stmt_get_result($stmt);
+  		$row = mysqli_fetch_assoc($result);
+  		if($row){
+
+  			$verifypassword = password_verify($password, $row['password']);
+  			if ($verifypassword == flase) {
+  				header("Location:../loginpage.php?error=password_is_no_correct");
+  				exit();
+  			}
+  			else{
+  				session_start();
+  				$_SESSION['username'] = $row['username'];
+  				header("../Location:index.php?message=User_Loggedin_susccessfully");
+  				exit();
+  			}
+  		}
+  	}
+  }
+}
+else
+{
+	header("Location: ../loginpage.php?error=Login_False");
+}
+?>
