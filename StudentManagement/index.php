@@ -8,10 +8,11 @@ include 'includes/links.php'
 ?>
 <style type="text/css">
 	body  {
-  background-image: url(sea.jpg);
+  background-image: url(workplace1.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-color: rgba(0,0,0,0.4);
 }
 a{
 	list-style: none;

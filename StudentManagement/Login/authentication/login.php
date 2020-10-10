@@ -36,7 +36,7 @@ if(isset ($_POST['login'])){
   			else{
   				session_start();
   				$_SESSION['username'] = $row['username'];
-  				header("../Location:../../index.php?message=User_Loggedin_susccessfully");
+  				header("../Location:../index.php?message=User_Loggedin_susccessfully");
   				exit();
   			}
   		}
