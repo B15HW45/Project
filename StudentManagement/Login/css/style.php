@@ -35,6 +35,14 @@ letter-spacing: 2px;
 	background-color: white;
 	color: black;
 }
+.navbar-light .welcome
+{
+color: white;
+font-size: 25px;
+text-transform: uppercase;
+font-weight: bold;
+letter-spacing: 2px;
+}
 .navbar-light .navbar-nav .nav-link
 {
 	color: #fff;

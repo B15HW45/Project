@@ -18,11 +18,11 @@ include 'includes/links.php'
 		<div class="wrap-contact100">
 			<div class="contact100-form-title" style="background-image: url(images/bg-01.jpg);">
 				<span class="contact100-form-title-1">
-					Contact Us
+					Registration form
 				</span>
 			
 				<span class="contact100-form-title-2">
-					Feel free to drop us a line below!
+					Please fill all the required areas!
 				</span>
 			</div>
 

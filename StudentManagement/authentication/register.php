@@ -67,7 +67,7 @@ if(isset ($_POST['register'])){
                         $encpassword= password_hash($password,PASSWORD_DEFAULT);
                         mysqli_stmt_bind_param($stmt,"sss",$username,$email,$encpassword);
                         mysqli_stmt_execute($stmt);
-                        header("Location:../index.php?error=LoginSuccess");
+                        header("Location:../Login/loginform.php?message=RegistrationSuccess_Please_Login");
                         exit();
                 	}
 

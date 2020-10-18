@@ -6,7 +6,7 @@ include 'header.php'
 			<div class="wrap-login100">
 				<form class="login100-form validate-form" method="POST" action="authentication/login.php">
 					<span class="login100-form-title p-b-20">
-						<a href="../index.php"><h1 style="color: #00ad5f;">Home Page</h1></a>
+						<a href="../index.php"><h1 style="color: #00ad5f;"><i class="fa fa-gg-circle">Home Page</i></h1></a>
 					</span>
 					<span class="login100-form-title p-b-34">
 						Account Login
@@ -22,7 +22,7 @@ include 'header.php'
 					
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn" type="submit" name="login">
-							Sign in
+							Log in
 						</button>
 					</div>
 

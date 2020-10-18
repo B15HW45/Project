@@ -12,14 +12,14 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top">
  	<div class="container">
- 		 <a class="navbar-brand" href="#">Navbar</a>
+ 		 <span class="welcome">Welcome,</span><a class="navbar-brand" href="#">User</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="home.php">Home</a>
+        <a class="nav-link" href="index.php">Home</a>
       </li>
         <li class="nav-item">
         <a class="nav-link" href="bloglist.php">Blog list</a>

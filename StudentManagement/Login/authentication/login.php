@@ -1,7 +1,6 @@
 <?php
-include_once ' ../Config/db_conn.php'
+include_once'../config/db_conn.php'
 ?>
-
 <?php
 if(isset ($_POST['login'])){
 
@@ -13,24 +12,24 @@ if(isset ($_POST['login'])){
   	exit();
   }
   else{
-  	$query = "SELECT * FROM students WHERE username = ?";
+  	$query = "SELECT * FROM students WHERE username = '?' ";
   	$stmt = mysqli_stmt_init($conn);
 
-  	if (!mysqli_stmt_prepare($stmt, $query)) {
+  	if(!mysqli_stmt_prepare($stmt, $query)) {
   		header("Location:../loginform.php?error=prepared_statement");
   		exit();
   	}
   	else
   	{
-  		mysqli_stmt_bind_param($stmt,"s",$username);
+  		mysqli_stmt_bind_param($stmt, 's', $username);
   		mysqli_stmt_execute($stmt);
   		$result = mysqli_stmt_get_result($stmt);
   		$row = mysqli_fetch_assoc($result);
   		if($row){
 
   			$verifypassword = password_verify($password, $row['password']);
-  			if ($verifypassword == flase) {
-  				header("Location:../loginform.php?error=password_is_no_correct");
+  			if ($verifypassword == false) {
+  				header("Location:../loginform.php?error=password_is_not_correct");
   				exit();
   			}
   			else{
